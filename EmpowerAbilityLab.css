@@ -1,0 +1,276 @@
+/* ========== GLOBAL ========== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+  color: #222;
+  background-color: #f5f5f5;
+}
+
+.page-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* Helper: hide elements with hidden attribute */
+[hidden] {
+  display: none !important;
+}
+
+/* ========== HEADER + TABS ========== */
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 1rem;
+}
+
+.logo p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.tablist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tab-button {
+  border: 1px solid #ccc;
+  padding: 0.4rem 0.9rem;
+  background-color: #e9e9e9;
+  border-radius: 0.5rem 0.5rem 0 0;
+  cursor: pointer;
+  font: inherit;
+}
+
+.tab-button:hover {
+  background-color: #dedede;
+}
+
+.tab-button:focus-visible {
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+}
+
+.tab-button[aria-selected="true"] {
+  background-color: #ffffff;
+  border-bottom-color: #ffffff;
+  font-weight: 600;
+}
+
+/* ========== TAB PANELS ========== */
+
+.tab-panels {
+  border: 1px solid #ccc;
+  border-radius: 0 0.5rem 0.5rem 0.5rem;
+  background-color: #ffffff;
+  padding: 1.5rem;
+}
+
+/* Generic panel spacing */
+.tab-panel h1 {
+  margin-top: 0;
+}
+
+/* ========== HOME SECTION ========== */
+
+.home-section .primary-btn {
+  margin-top: 1rem;
+}
+
+/* Features layout */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.feature-box {
+  flex: 1 1 250px;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: #fafafa;
+}
+
+.feature-box h2 {
+  margin-top: 0;
+}
+
+.learn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #0066cc;
+  text-decoration: underline;
+}
+
+/* ========== SERVICES SECTION ========== */
+
+.services-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.services-main {
+  flex: 2 1 300px;
+}
+
+.services-aside {
+  flex: 1 1 200px;
+}
+
+.services-card {
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* ========== SCHEDULE FORM SECTION ========== */
+
+.schedule-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 700px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-row-inline {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.schedule-form label {
+  font-weight: 600;
+}
+
+.schedule-form input[type="text"],
+.schedule-form input[type="tel"],
+.schedule-form input[type="email"],
+.schedule-form textarea {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.4rem 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #ccc;
+  font: inherit;
+}
+
+/* Checkbox group */
+
+.checkbox-group {
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  padding: 0.8rem 1rem;
+}
+
+.checkbox-group legend {
+  font-weight: 600;
+  padding: 0 0.3rem;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.4rem;
+}
+
+/* ========== BUTTONS ========== */
+
+.primary-btn,
+.secondary-btn {
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+.primary-btn {
+  background-color: #0066cc;
+  color: #ffffff;
+}
+
+.primary-btn:hover {
+  background-color: #004e99;
+}
+
+.secondary-btn {
+  background-color: #e0e0e0;
+  color: #222;
+}
+
+.secondary-btn:hover {
+  background-color: #c9c9c9;
+}
+
+/* ========== MODAL ========== */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+.modal-box {
+  max-width: 500px;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.modal-box h2 {
+  margin-top: 0;
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 600px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tab-panels {
+    padding: 1rem;
+  }
+
+  .services-layout {
+    flex-direction: column;
+  }
+}
