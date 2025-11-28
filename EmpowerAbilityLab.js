@@ -22,6 +22,12 @@ document.addEventListener("DOMContentLoaded", () => {
       panel.hidden = panel.id !== targetId;
     });
 
+    // Update document title based on data-title
+    const newTitle = tab.dataset.title;
+    if (newTitle) {
+      //document.title = newTitle;
+    }
+    document.title = newTitle;
     tab.focus();
   }
 
