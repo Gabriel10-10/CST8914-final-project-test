@@ -44,11 +44,11 @@ document.addEventListener("DOMContentLoaded", () => {
       if (key === "ArrowRight") {
         event.preventDefault();
         const nextTab = tabs[(currentIndex + 1) % tabs.length];
-        activateTab(nextTab);
+        nextTab.focus();
       } else if (key === "ArrowLeft") {
         event.preventDefault();
         const prevTab = tabs[(currentIndex - 1 + tabs.length) % tabs.length];
-        activateTab(prevTab);
+        prevTab.focus()
       } else if (key === "Home") {
         event.preventDefault();
         activateTab(tabs[0]);
@@ -105,4 +105,5 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
 });

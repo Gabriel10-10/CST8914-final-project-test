@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Schedule a call - Empower Ability Labs</title>
+  <title>Empower Ability Labs</title>
 
   <!-- Custom CSS (no Bootstrap) -->
   <link rel="stylesheet" href="EmpowerAbilityLab.css" />
@@ -16,8 +16,8 @@
         <p>logo</p>
       </div>
 
-      <nav class="site-nav" aria-label="Main sections">
-        <div class="tablist" role="tablist">
+      <nav class="site-nav">
+        <div class="tablist" role="tablist" aria-label="Navigation tabs">
           <button
             class="tab-button"
             id="tab-home"
@@ -25,7 +25,8 @@
             aria-selected="true"
             aria-controls="panel-home"
             tabindex="0"
-            data-title="Empower Ability Labs Building Empathy and Inclusive Digital Experiences"
+            data-title="Empower Ability Labs"
+            onclick="activateTab()"
           >
             Home
           </button>
@@ -37,7 +38,7 @@
             aria-selected="false"
             aria-controls="panel-services"
             tabindex="-1"
-            data-title="Accessibility Services: Empathy Labs, Speakers and Usability Testing"
+            data-title="Services - Empower ability Labs"
           >
             Services
           </button>
@@ -49,7 +50,7 @@
             aria-selected="false"
             aria-controls="panel-schedule"
             tabindex="-1"
-            data-title="Schedule a Call to Plan Your Accessibility Initiative"
+            data-title="Schedule a Call - Empower Ability Labs"
           >
             Schedule a Call
           </button>
@@ -78,7 +79,6 @@
         </p>
 
         <button
-          type="button"
           class="primary-btn"
           id="open-modal-button"
         >
