@@ -210,6 +210,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+  
   /* ==========================
    * FORM + SWITCH BEHAVIOR
    * ========================== */
