@@ -175,7 +175,6 @@ body.modal-open {
 .services-illustration img {
   max-width: 110px;   /* adjust size if you like */
   height: auto;
-  display: block;
 }
 
 /* Stack vertically on small screens */
@@ -366,4 +365,10 @@ body.modal-open {
 
 .site-footer small {
   letter-spacing: 0.01em;    /* tiny spacing for readability */
+}
+
+@media (max-width: 600px) {
+  img {
+    display: none;
+  }
 }
