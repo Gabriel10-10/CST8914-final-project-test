@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (key === "ArrowRight") {
         event.preventDefault();
         const nextTab = tabs[(currentIndex + 1) % tabs.length];
-        // Here we only move focus; pressing Space/Enter will "click" the tab
+        // Here we only move focus; pressing Space/Enter will activate the tab
         nextTab.focus();
       } else if (key === "ArrowLeft") {
         event.preventDefault();
