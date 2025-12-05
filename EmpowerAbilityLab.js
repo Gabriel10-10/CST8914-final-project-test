@@ -160,6 +160,11 @@ document.addEventListener("DOMContentLoaded", () => {
     lastFocusedElement = document.activeElement;
     modal.hidden = false;
     document.addEventListener("keydown", handleModalKeydown);
+    
+    //Prevent background scrolling
+    document.body.classList.add('modal-open');
+
+    //Move focus to close button
     closeModalButton.focus();
   }
 
@@ -172,7 +177,27 @@ document.addEventListener("DOMContentLoaded", () => {
     if (lastFocusedElement && typeof lastFocusedElement.focus === "function") {
       lastFocusedElement.focus();
     }
+    
+    //Restore background scrolling
+    document.body.classList.remove('modal-open');
   }
+
+  // Focus trap until closed
+  modal.addEventListener('keydown', (e) => {
+    if (e.key === 'Tab') {
+      const focusable = modal.querySelectorAll('a, button, input, textarea, select, [tabindex]:not([tabindex="-1"])');
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+  });
 
   if (openModalButton && closeModalButton && modal) {
     openModalButton.addEventListener("click", openModal);
