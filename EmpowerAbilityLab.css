@@ -115,8 +115,6 @@ body {
 .learn {
   display: inline-block;
   margin-top: 0.5rem;
-  color: #0066cc;
-  text-decoration: underline;
 }
 
 /*Prevent background scrolling when modal is opened*/
