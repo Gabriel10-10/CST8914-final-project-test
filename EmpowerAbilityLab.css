@@ -368,7 +368,11 @@ body.modal-open {
 }
 
 @media (max-width: 600px) {
-  img {
+  .schedule-illustration {
+    display: none;
+  }
+
+  .services-illustration{
     display: none;
   }
 }
