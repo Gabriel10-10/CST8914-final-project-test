@@ -298,8 +298,12 @@ body.modal-open {
 }
 
 .secondary-btn {
-  background-color: #e0e0e0;
-  color: #222;
+  background-color: #0066cc;
+  color: #ffffff;
+}
+
+.secondary-btn:focus-visible {
+  outline: 3px solid #0D6EFD40;
 }
 
 .secondary-btn:hover {
@@ -346,6 +350,14 @@ body.modal-open {
   .services-layout {
     flex-direction: column;
   }
+
+  .schedule-illustration {
+    display: none;
+  }
+
+  .services-illustration{
+    display: none;
+  }
 }
 
 /* Footer styling */
@@ -367,12 +379,3 @@ body.modal-open {
   letter-spacing: 0.01em;    /* tiny spacing for readability */
 }
 
-@media (max-width: 600px) {
-  .schedule-illustration {
-    display: none;
-  }
-
-  .services-illustration{
-    display: none;
-  }
-}
