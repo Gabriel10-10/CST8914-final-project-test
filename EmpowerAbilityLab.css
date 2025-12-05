@@ -153,7 +153,70 @@ body.modal-open {
   gap: 0.5rem;
 }
 
+/* ========== SERVICES INTRO (TEXT + IMAGE SIDE BY SIDE) ========== */
+
+.services-intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.services-intro p {
+  margin: 0;
+  flex: 1;            /* text takes the remaining space */
+  max-width: 45rem;   /* adjust (40–50rem) to control how much it wraps */
+}
+
+.services-illustration img {
+  max-width: 110px;   /* adjust size if you like */
+  height: auto;
+  display: block;
+}
+
+/* Stack vertically on small screens */
+@media (max-width: 600px) {
+  .services-intro {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
 /* ========== SCHEDULE FORM SECTION ========== */
+
+/* ========== SCHEDULE INTRO (TEXT + IMAGE SIDE BY SIDE) ========== */
+
+.schedule-intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+/* Limit how wide the text can be so it wraps sooner */
+.schedule-intro p {
+  max-width: 38rem;   /* try 40–50rem until you like it */
+  margin: 0;
+}
+
+/* Optional: keep the image from getting too big */
+.schedule-illustration img {
+  max-width: 80px;
+  height: auto;
+}
+
+
+/* On small screens, stack text and image vertically */
+@media (max-width: 600px) {
+  .schedule-intro {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* end */
+
 
 .schedule-form {
   display: flex;
@@ -189,6 +252,7 @@ body.modal-open {
   border: 1px solid #ccc;
   font: inherit;
 }
+
 
 /* Checkbox group */
 
