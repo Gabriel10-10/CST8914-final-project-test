@@ -37,9 +37,9 @@ body {
   margin-bottom: 1rem;
 }
 
-.logo p {
-  margin: 0;
-  font-weight: bold;
+.logo {
+  width: 150px;   /* set desired width */
+  height: auto;   /* keeps aspect ratio */
 }
 
 .tablist {
